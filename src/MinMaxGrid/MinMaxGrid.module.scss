@@ -1,0 +1,28 @@
+@use 'src/style/foundations' as *;
+
+$min: 100px;
+$max: 400px;
+
+.MinMaxGrid {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1.5rem;
+  grid-template-rows: minmax(12rem, auto);
+  grid-template-columns: minmax(#{$min}, #{$max}) minmax(#{$min}, #{$max}) minmax(
+      #{$min},
+      #{$max}
+    );
+  &_item {
+    @include gridItem();
+  }
+}
+
+// min max rules
+// min < max
+// 1fr only works for the max value
+// 0 as min value is allowed
+
+// min-content is the smallest size a box can take without overflowing its content
+// max-content represents the size a box needs to contain all of its content without being wrapped or it overflows the box.
+// max-content !== auto that means 100%
+// fit-content(100px) is the same as minmax(100px, max-content)

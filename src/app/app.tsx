@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import SimpleGrid from 'src/SimpleGrid';
 import ExplicitGrid from 'src/ExplicitGrid';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import MinMaxGrid from 'src/MinMaxGrid';
 import styles from './app.module.scss';
 
-type GridLayoutType = 'simple' | 'explicit';
+type GridLayoutType = 'simple' | 'explicit' | 'minmax';
 
 export function App() {
   const [layout, setLayout] = useState<GridLayoutType>('simple');
@@ -24,12 +24,14 @@ export function App() {
         <select name="layutType">
           <option value="simple">Simple</option>
           <option value="explicit">Explicit</option>
+          <option value="minmax">Minmax</option>
         </select>
         <button type="submit">Submit</button>
       </form>
       <main className={styles.app_example}>
         {layout === 'simple' && <SimpleGrid />}
         {layout === 'explicit' && <ExplicitGrid />}
+        {layout === 'minmax' && <MinMaxGrid />}
       </main>
     </div>
   );
