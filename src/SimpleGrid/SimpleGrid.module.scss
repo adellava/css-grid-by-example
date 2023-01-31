@@ -1,0 +1,9 @@
+@use 'src/style/foundations' as *;
+
+.SimpleGrid {
+  display: grid; // try also inline-grid
+  grid-row-gap: 1rem;
+  &_item {
+    @include gridItem();
+  }
+}

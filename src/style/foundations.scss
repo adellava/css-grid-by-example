@@ -1,0 +1,6 @@
+@mixin gridItem {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: var(--grid-text-color);
+  background-color: var(--grid-item-color);
+}

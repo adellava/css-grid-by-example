@@ -18,8 +18,8 @@ export function App() {
   };
   return (
     <div className={styles.app}>
-      <h1>Welcome css-grid-by-example</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 className={styles.app_title}>Welcome css-grid-by-example</h1>
+      <form className={styles.app_form} onSubmit={handleSubmit}>
         <label htmlFor="layout">Layout</label>
         <select name="layutType">
           <option value="simple">Simple</option>
@@ -27,7 +27,7 @@ export function App() {
         </select>
         <button type="submit">Submit</button>
       </form>
-      <main>
+      <main className={styles.app_example}>
         {layout === 'simple' && <SimpleGrid />}
         {layout === 'explicit' && <ExplicitGrid />}
       </main>
