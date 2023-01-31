@@ -3,9 +3,10 @@ import SimpleGrid from 'src/SimpleGrid';
 import ExplicitGrid from 'src/ExplicitGrid';
 import MinMaxGrid from 'src/MinMaxGrid';
 import RepeatGrid from 'src/RepeatGrid';
+import NamedGrid from 'src/NamedGrid';
 import styles from './app.module.scss';
 
-type GridLayoutType = 'simple' | 'explicit' | 'minmax' | 'repeat';
+type GridLayoutType = 'simple' | 'explicit' | 'minmax' | 'repeat' | 'named';
 
 export function App() {
   const [layout, setLayout] = useState<GridLayoutType>('simple');
@@ -27,6 +28,7 @@ export function App() {
           <option value="explicit">Explicit</option>
           <option value="minmax">Minmax</option>
           <option value="repeat">Repeat</option>
+          <option value="named">Named</option>
         </select>
         <button type="submit">Submit</button>
       </form>
@@ -35,6 +37,7 @@ export function App() {
         {layout === 'explicit' && <ExplicitGrid />}
         {layout === 'minmax' && <MinMaxGrid />}
         {layout === 'repeat' && <RepeatGrid />}
+        {layout === 'named' && <NamedGrid />}
       </main>
     </div>
   );

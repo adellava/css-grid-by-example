@@ -18,12 +18,7 @@ const RepeatGrid = () => {
       <div className={style.RepeatGrid_item}>13</div>
       <div className={style.RepeatGrid_item}>
         14
-        <h2>Explicit Grid</h2>
-        <h2>Explicit Grid</h2>
-        <h2>Explicit Grid</h2>
-        <h2>Explicit Grid</h2>
-        <h2>Explicit Grid</h2>
-        1fr = ((width of grid) - (3rem) - (80% of width of grid)) / 3
+        <h2>Repeat Grid</h2>
       </div>
       <div className={style.RepeatGrid_item}>15</div>
       <div className={style.RepeatGrid_item}>16</div>

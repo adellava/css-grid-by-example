@@ -1,0 +1,29 @@
+@use 'src/style/foundations' as *;
+
+.NamedGrid {
+  min-height: 80vh;
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1.5rem;
+  grid-template-areas:
+    '. header .'
+    '. content .'
+    'footer footer footer';
+  grid-template-rows: minmax(1.2rem, 5rem) 1fr minmax(1.2rem, 15vh);
+  grid-template-columns:
+    minmax(1.2rem, 1fr)
+    minmax(auto, 67ch)
+    minmax(1.2rem, 1fr);
+  &_header {
+    @include gridItem();
+    grid-area: header;
+  }
+  &_content {
+    @include gridItem();
+    grid-area: content;
+  }
+  &_footer {
+    @include gridItem();
+    grid-area: footer;
+  }
+}
