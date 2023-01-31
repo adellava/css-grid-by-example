@@ -4,7 +4,8 @@
   display: grid;
   grid-row-gap: 1rem;
   grid-column-gap: 1.5rem;
-  grid-template-rows: 7rem 3rem 4rem;
+  grid-template-rows: 2rem 3rem;
+  // grid-auto-rows: 140px; // and the implicit one?
   grid-template-columns: 3rem 80% 1fr 2fr;
   &_item {
     @include gridItem();

@@ -2,9 +2,10 @@ import { useState } from 'react';
 import SimpleGrid from 'src/SimpleGrid';
 import ExplicitGrid from 'src/ExplicitGrid';
 import MinMaxGrid from 'src/MinMaxGrid';
+import RepeatGrid from 'src/RepeatGrid';
 import styles from './app.module.scss';
 
-type GridLayoutType = 'simple' | 'explicit' | 'minmax';
+type GridLayoutType = 'simple' | 'explicit' | 'minmax' | 'repeat';
 
 export function App() {
   const [layout, setLayout] = useState<GridLayoutType>('simple');
@@ -25,6 +26,7 @@ export function App() {
           <option value="simple">Simple</option>
           <option value="explicit">Explicit</option>
           <option value="minmax">Minmax</option>
+          <option value="repeat">Repeat</option>
         </select>
         <button type="submit">Submit</button>
       </form>
@@ -32,6 +34,7 @@ export function App() {
         {layout === 'simple' && <SimpleGrid />}
         {layout === 'explicit' && <ExplicitGrid />}
         {layout === 'minmax' && <MinMaxGrid />}
+        {layout === 'repeat' && <RepeatGrid />}
       </main>
     </div>
   );

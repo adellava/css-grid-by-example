@@ -1,0 +1,19 @@
+@use 'src/style/foundations' as *;
+
+.RepeatGrid {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1.5rem;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  &_item {
+    @include gridItem();
+  }
+}
+
+// repeat
+// 1st arg: number of columns or rows to repeat + (auto-fill, auto-fit)
+// 2nd arg: set of tracks that will be repeated
+
+// NB auto-fit keyword will expand the grid items to fill the available space
+//    auto-fill will keep the available space reserved without altering the grid items width
