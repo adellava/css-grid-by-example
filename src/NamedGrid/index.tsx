@@ -2,9 +2,9 @@ import style from './NamedGrid.module.scss';
 
 const NamedGrid = () => {
   return (
-    <div className={style.NamedGrid}>
-      <div className={style.NamedGrid_header}>header</div>
-      <div className={style.NamedGrid_content}>
+    <section className={style.NamedGrid}>
+      <span className={style.NamedGrid_header}>header</span>
+      <article className={style.NamedGrid_content}>
         content
         <br />
         Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod
@@ -14,9 +14,9 @@ const NamedGrid = () => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         obcaecat cupiditat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
-      </div>
-      <div className={style.NamedGrid_footer}>footer</div>
-    </div>
+      </article>
+      <footer className={style.NamedGrid_footer}>footer</footer>
+    </section>
   );
 };
 

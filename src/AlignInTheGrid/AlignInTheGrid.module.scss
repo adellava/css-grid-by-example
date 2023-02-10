@@ -1,0 +1,19 @@
+@use 'src/style/foundations' as *;
+
+.AlignInTheGrid {
+  display: grid;
+  grid-row-gap: 1rem;
+  grid-template-columns: repeat(5, 120px);
+  grid-template-rows: repeat(5, 120px);
+  justify-content: space-between;
+  align-content: space-evenly;
+  min-height: 1200px;
+  &_item {
+    @include gridItem();
+  }
+  &___self {
+    @include gridItem();
+    align-self: start;
+    justify-self: start;
+  }
+}

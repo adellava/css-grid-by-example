@@ -3,7 +3,25 @@ import style from './RepeatGrid.module.scss';
 const RepeatGrid = () => {
   return (
     <div className={style.RepeatGrid}>
-      <div className={style.RepeatGrid_item}>1</div>
+      <div className={style.RepeatGrid_item}>
+        1{' '}
+        <p>
+          Loremipsumdolorsitamet, consecteturadipiscielit, sed do eiusmod tempor
+          incidunt ut labore et dolore magna aliqua
+        </p>{' '}
+        <p>
+          Loremipsumdolorsitamet, consecteturadipiscielit, sed do eiusmod tempor
+          incidunt ut labore et dolore magna aliqua
+        </p>{' '}
+        <p>
+          Loremipsumdolorsitamet, consecteturadipiscielit, sed do eiusmod tempor
+          incidunt ut labore et dolore magna aliqua
+        </p>{' '}
+        <p>
+          Loremipsumdolorsitamet, consecteturadipiscielit, sed do eiusmod tempor
+          incidunt ut labore et dolore magna aliqua
+        </p>
+      </div>
       <div className={style.RepeatGrid_item}>2</div>
       <div className={style.RepeatGrid_item}>3</div>
       <div className={style.RepeatGrid_item}>4</div>

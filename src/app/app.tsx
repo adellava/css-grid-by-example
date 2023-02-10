@@ -4,9 +4,18 @@ import ExplicitGrid from 'src/ExplicitGrid';
 import MinMaxGrid from 'src/MinMaxGrid';
 import RepeatGrid from 'src/RepeatGrid';
 import NamedGrid from 'src/NamedGrid';
+import AlignToTheGrid from 'src/AlignToTheGrid';
+import AlignInTheGrid from 'src/AlignInTheGrid';
 import styles from './app.module.scss';
 
-type GridLayoutType = 'simple' | 'explicit' | 'minmax' | 'repeat' | 'named';
+type GridLayoutType =
+  | 'simple'
+  | 'explicit'
+  | 'minmax'
+  | 'repeat'
+  | 'named'
+  | 'align'
+  | 'align-in-the-grid';
 
 export function App() {
   const [layout, setLayout] = useState<GridLayoutType>('simple');
@@ -29,6 +38,8 @@ export function App() {
           <option value="minmax">Minmax</option>
           <option value="repeat">Repeat</option>
           <option value="named">Named</option>
+          <option value="align">Align</option>
+          <option value="align-in-the-grid">Align in the grid</option>
         </select>
         <button type="submit">Submit</button>
       </form>
@@ -38,6 +49,8 @@ export function App() {
         {layout === 'minmax' && <MinMaxGrid />}
         {layout === 'repeat' && <RepeatGrid />}
         {layout === 'named' && <NamedGrid />}
+        {layout === 'align' && <AlignToTheGrid />}
+        {layout === 'align-in-the-grid' && <AlignInTheGrid />}
       </main>
     </div>
   );

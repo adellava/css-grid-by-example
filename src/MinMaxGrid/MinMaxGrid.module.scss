@@ -1,14 +1,14 @@
 @use 'src/style/foundations' as *;
 
-$min: 100px;
-$max: 400px;
+$min: min-content;
+$max: 500px;
 
 .MinMaxGrid {
   display: grid;
   grid-row-gap: 1rem;
   grid-column-gap: 1.5rem;
   grid-template-rows: minmax(12rem, auto);
-  grid-template-columns: minmax(#{$min}, #{$max}) minmax(#{$min}, #{$max}) minmax(
+  grid-template-columns: minmax(#{$min}, #{$max}) fit-content(100px) minmax(
       #{$min},
       #{$max}
     );
